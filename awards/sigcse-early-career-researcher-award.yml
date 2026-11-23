@@ -1,0 +1,13 @@
+name: "ACM SIGCSE Early Career Researcher Award"
+sponsor: "ACM Special Interest Group on Computer Science Education"
+sponsor_type: "Society or association"
+url: "https://sigcse.org/programs/awards/early-career-nomination.html"
+status: "between-cycles"
+deadline_note: "Annual; nominations are usually due September 1 (extended to November 17 in 2025)."
+eligibility: "Current SIGCSE members in the early stages of an academic career."
+nomination: "others"
+recognizes: ["Education research"]
+stages: ["Early career"]
+summary: "Recognizes outstanding contributions to computing education research by early-career scholars."
+disciplines: ["Computing"]
+checked: 2026-11-23

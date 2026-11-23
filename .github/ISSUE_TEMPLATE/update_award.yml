@@ -1,0 +1,16 @@
+name: Correct a listing
+description: A deadline, prize, link, or other detail that is wrong or out of date.
+title: "Update: "
+labels: ["update award"]
+body:
+  - type: input
+    id: listing
+    attributes: {label: "Which listing?", description: "Award name, or the file in awards/ if you know it."}
+    validations: {required: true}
+  - type: textarea
+    id: change
+    attributes: {label: "What should change?"}
+    validations: {required: true}
+  - type: input
+    id: source
+    attributes: {label: "Where did you see the correct information?", description: "Ideally a link to the sponsor's page."}

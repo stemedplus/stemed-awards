@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STEMEd+ Awards</title>
+<meta name="description" content="National and international awards for STEM+ teaching, STEM+ education research, and science communication, with nomination deadlines, in one place.">
+<link rel="alternate" type="application/rss+xml" title="Newly listed awards" href="feeds/new.xml">
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --line:#dde2ea; --bg:#f7f8fa; --card:#fff; --accent:#1f5f8b; --soft:#e6f0f7; --softline:#c9dcea;
+          --soon:#a3261b; --soonbg:#fdecea; --mid:#7a4f00; --midbg:#fdf3dc; --ok:#1f6b3a; --okbg:#e7f4ec; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .stemedplus { display: inline-block; margin: 0 0 8px; } .stemedplus img { display: block; height: 48px; width: auto; }
+  header { background: var(--card); border-bottom: 1px solid var(--line); }
+  header .wrap { padding-top: 26px; padding-bottom: 20px; }
+  h1 { font-size: 1.7rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); max-width: 72ch; }
+  .links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .btn { display: inline-block; padding: 8px 14px; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; }
+  .btn.secondary { background: var(--card); color: var(--accent); border: 1px solid var(--accent); }
+  a { color: var(--accent); }
+  .soon { background: var(--soft); border-bottom: 1px solid var(--softline); }
+  .soon .wrap { padding-top: 18px; padding-bottom: 18px; }
+  .soon h2 { font-size: 1.05rem; margin: 0 0 10px; }
+  .strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+  .strip .c { background: var(--card); border: 1px solid var(--softline); border-radius: 8px; padding: 10px 12px; font-size: .92rem; }
+  .strip .c a { font-weight: 600; text-decoration: none; } .strip .c a:hover { text-decoration: underline; }
+  .strip .c .m { color: var(--muted); font-size: .82rem; margin-top: 3px; }
+  .controls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0 8px; }
+  .controls .search { grid-column: span 2; }
+  label { display: block; font-size: .8rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
+  input, select { width: 100%; padding: 9px 10px; font: inherit; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); }
+  input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 6px 0 12px; }
+  #count { color: var(--muted); font-size: .9rem; margin: 0; }
+  .bar .r { display: flex; gap: 10px; align-items: center; font-size: .9rem; }
+  .bar .r select { width: auto; padding: 5px 8px; }
+  button.link { font: inherit; font-size: .9rem; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; }
+  ol#list { list-style: none; margin: 0; padding: 0; }
+  ol#list li { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .t { font-weight: 600; font-size: 1.04rem; text-decoration: none; } .t:hover { text-decoration: underline; }
+  .meta { color: var(--muted); font-size: .88rem; margin-top: 2px; }
+  .due { display: inline-block; margin-top: 8px; font-size: .88rem; font-weight: 600; padding: 3px 10px; border-radius: 6px; background: #eef0f3; }
+  .due.soon { background: var(--soonbg); color: var(--soon); } .due.mid { background: var(--midbg); color: var(--mid); } .due.ok { background: var(--okbg); color: var(--ok); }
+  .note { color: var(--muted); font-size: .85rem; margin-top: 4px; }
+  .sum { margin: 8px 0 0; font-size: .94rem; }
+  dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 2px 12px; margin: 8px 0 0; font-size: .9rem; }
+  dl.facts dt { color: var(--muted); font-weight: 600; } dl.facts dd { margin: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
+  .tag { font-size: .75rem; padding: 2px 8px; border-radius: 999px; background: #eef0f3; color: var(--ink); font-weight: 600; }
+  .tag.st { background: var(--soft); color: var(--accent); }
+  .tag.k { background: #fff; border: 1px solid var(--line); color: var(--muted); font-weight: 500; }
+  .acts { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: .88rem; }
+  .acts a, .acts button { color: var(--accent); }
+  .acts button { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+  .more { text-align: center; margin: 14px 0 30px; }
+  .more button { font: inherit; padding: 8px 16px; border-radius: 6px; border: 1px solid var(--accent); background: var(--card); color: var(--accent); cursor: pointer; }
+  .empty { padding: 26px; text-align: center; color: var(--muted); }
+  .disclaimer { font-size: .85rem; color: var(--muted); margin: 0 0 10px; }
+  .warn { font-size: .85rem; color: #8a5a00; margin: 0 0 8px; }
+  footer { background: var(--card); border-top: 1px solid var(--line); padding: 20px 0 30px; font-size: .9rem; color: var(--muted); }
+  footer h2 { font-size: 1rem; color: var(--ink); margin: 18px 0 6px; } footer h2:first-child { margin-top: 0; }
+  footer ul { margin: 6px 0 12px; padding-left: 18px; }
+  footer details { margin: 0 0 12px; } footer summary { cursor: pointer; color: var(--accent); }
+  code { background: #eef0f3; padding: 1px 5px; border-radius: 4px; font-size: .85em; word-break: break-all; }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 860px) { .controls { grid-template-columns: 1fr 1fr; } .controls .search { grid-column: 1 / -1; } }
+  .join { background: #e6f0f7; border: 1px solid #c9dcea; border-radius: 8px; padding: 10px 14px; font-size: .93rem; color: #1d2433; }
+  .join p { margin: 4px 0; }
+  .join-top { margin: 14px 0 0; }
+  .join-bottom { margin: 0 0 16px; }
+</style>
+<link rel="stylesheet" href="stemedplus-theme.css">
+</head>
+<body>
+<div class="sp-bar"><div class="sp-in"><a class="sp-logo" href="https://stemedplus.org/"><img src="stemedplus-commons-logo-white.png" alt="STEMEd+ Commons home" width="263" height="91"></a><input type="checkbox" id="sp-menu-toggle" class="sp-toggle"><label for="sp-menu-toggle" class="sp-burger"><span class="sp-burger-icon" aria-hidden="true"></span>Menu</label><nav class="sp-nav" aria-label="STEMEd+ Commons"><ul class="sp-top"><li><a href="https://stemedplus.github.io/stemed-start-here/">Why STEMEd+?</a></li><li class="sp-has sp-has-mega sp-here"><button type="button" class="sp-label" aria-haspopup="true">Find</button><svg class="sp-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.5 4L6 8L10.5 4" stroke="currentColor" stroke-width="1.5"/></svg><div class="sp-sub sp-mega"><div class="sp-group"><p class="sp-head">Careers &amp; Learning</p><ul><li><a href="https://stemedplus.github.io/stemed-jobs/">Jobs</a></li><li><a href="https://stemedplus.github.io/stem-ed-research-programs/">Graduate Programs</a></li><li><a href="https://stemedplus.github.io/stemed-professional-development/">Professional Development</a></li><li><a href="https://stemedplus.github.io/STEMEd-Digest/publish.html">Where to Publish</a></li></ul></div><div class="sp-group"><p class="sp-head">Research &amp; Funding</p><ul><li><a href="https://stemedplus.github.io/stemed-funding/">Funding</a></li><li><a href="https://stemedplus.github.io/stemed-awards/" aria-current="page">Awards</a></li><li><a href="https://stemedplus.github.io/STEMEd-Digest/">Digest</a></li><li><a href="https://stemedplus.github.io/stemed-conferences/">Conferences</a></li><li><a href="https://stemedplus.github.io/stemed-deadlines/">Deadlines</a></li></ul></div><div class="sp-group"><p class="sp-head">People &amp; Communities</p><ul><li><a href="https://stemedplus.github.io/stemed-collaborators/">Find Collaborators</a></li><li><a href="https://stemedplus.org/stemed-groups/">Groups to Join</a></li><li><a href="https://stemedplus.org/sites/">Sites to Explore</a></li><li><a href="https://stemedplus.profile.hcommons.org/members/">Members</a></li></ul></div><div class="sp-group"><p class="sp-head">Library</p><ul><li><a href="https://works.hcommons.org/collections/stemedplus/records?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest">STEMEd+ Library</a></li></ul></div></div></li><li class="sp-has"><button type="button" class="sp-label" aria-haspopup="true">Build</button><svg class="sp-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.5 4L6 8L10.5 4" stroke="currentColor" stroke-width="1.5"/></svg><div class="sp-sub sp-mega sp-mega-small sp-mega-one"><div class="sp-group"><p class="sp-head">For You &amp; Your Team</p><ul><li><a href="https://stemedplus.profile.hcommons.org/edit-profile/">Set Up Your Profile</a></li><li><a href="https://stemedplus.org/stemed-groups/create/step/group-details/">Create a Group</a></li><li><a href="https://stemedplus.org/sites/create/">Create a Site</a></li><li><a href="https://stemedplus.org/contact-us/">Request a Collection</a></li></ul></div></div></li><li class="sp-has"><button type="button" class="sp-label" aria-haspopup="true">Share</button><svg class="sp-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.5 4L6 8L10.5 4" stroke="currentColor" stroke-width="1.5"/></svg><div class="sp-sub sp-mega sp-mega-small"><div class="sp-group"><p class="sp-head">Your Work</p><ul><li><a href="https://works.hcommons.org/uploads/new?community=stemedplus&amp;page=1">Add a Work to the Library</a></li><li><a href="https://works.hcommons.org/collections/stemedplus-data/?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest">STEMEd+ Data</a></li></ul></div><div class="sp-group"><p class="sp-head">Opportunities</p><ul><li><a href="https://stemedplus.github.io/stemed-jobs/#add">Post a Job</a></li><li><a href="https://stemedplus.github.io/stemed-funding/#add">Share a Funding Opportunity</a></li><li><a href="https://github.com/stemedplus/stemed-awards/issues/new?template=suggest_award.yml">Suggest an Award</a></li><li><a href="https://stemedplus.github.io/stemed-conferences/#add">Add a Conference</a></li><li><a href="https://stemedplus.github.io/stemed-professional-development/#add">Add a Professional Development Program</a></li><li><a href="https://stemedplus.github.io/stem-ed-research-programs/#add">Add a Graduate Program</a></li><li><a href="https://stemedplus.github.io/STEMEd-Digest/publish.html#add">Suggest a Journal</a></li></ul></div></div></li><li class="sp-has"><a href="https://stemedplus.org/about/">About</a><svg class="sp-chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.5 4L6 8L10.5 4" stroke="currentColor" stroke-width="1.5"/></svg><div class="sp-sub sp-mega sp-mega-small sp-mega-three"><div class="sp-group"><p class="sp-head">Who We Are</p><ul><li><a href="https://stemedplus.org/about/">About STEMEd+</a></li><li><a href="https://stemedplus.org/vision-research/">Vision &amp; Research</a></li><li><a href="https://stemedplus.org/learn-more/">Governance</a></li><li><a href="https://stemedplus.org/collaborate/">Partner with Us</a></li></ul></div><div class="sp-group"><p class="sp-head">Get Help</p><ul><li><a href="https://stemedplus.org/stemed-commons-frequently-asked-questions/">FAQ</a></li><li><a href="https://support.hcommons.org/">Help &amp; Support</a></li><li><a href="https://stemedplus.org/contact-us/">Contact Us</a></li></ul></div><div class="sp-group"><p class="sp-head">Policies</p><ul><li><a href="https://about.hcommons.org/terms-of-service/" target="_blank" rel="noopener">Terms of Service<span class="sp-sr"> (opens in a new tab)</span></a></li><li><a href="https://about.hcommons.org/privacy-statement/" target="_blank" rel="noopener">Privacy Statement<span class="sp-sr"> (opens in a new tab)</span></a></li><li><a href="https://about.hcommons.org/guidelines-for-use/" target="_blank" rel="noopener">Guidelines for Use<span class="sp-sr"> (opens in a new tab)</span></a></li></ul></div></div></li><li class="sp-btn"><a href="https://stemedplus.org/join-stemed/">Join STEMEd+</a></li></ul></nav><a class="sp-login" href="https://stemedplus.org/wp-login.php">Log in</a></div></div>
+<div class="sp-notice" role="note" style="background:#fff7dc;border-bottom:1px solid #e8d9a0;color:#33301f;font:15px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif"><div style="max-width:1100px;margin:0 auto;padding:10px 20px"><strong>We are always adding resources with community help.</strong> We do not scrape the web; instead, we use public RSS feeds and APIs, or request permission where public feeds do not exist. Thank you for your contributions! <a href="https://github.com/stemedplus/stemed-awards/issues/new?template=suggest_award.yml" style="color:#014704;font-weight:600">Suggest a resource</a> or <a href="https://stemedplus.org/contact-us/">use our contact form</a>.</div></div>
+<header>
+  <div class="wrap">
+    <div class="sp-board-title" style="display:flex;align-items:center;gap:16px"><img class="sp-board-icon" src="https://stemedplus.github.io/stemed-start-here/home/awards.png" alt="" width="56" height="56" style="width:56px;height:56px;flex:none;border-radius:12px"><h1 id="title">STEMEd+ Awards</h1></div>
+    <p id="tagline"></p>
+    <div class="links">
+      <a class="btn" href="#calendar">Nomination calendar</a>
+      <a class="btn secondary" href="#nomination=self" id="selfbtn">Self-nominations welcome</a>
+      <a class="btn secondary" href="feeds/new.xml">New listings (RSS)</a>
+      <a class="btn secondary" id="suggest" href="#add">Suggest an award</a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><div class="join join-top" role="note"><p><strong>STEMEd+ Awards is part of STEMEd+ Commons</strong>, which brings together teachers, researchers, and learning professionals from every field to share work, find each other, and build what comes next. Join to set up your profile, add papers, posters, slides, and other work to the <a href="https://works.hcommons.org/collections/stemedplus/" target="_blank" rel="noopener noreferrer">STEMEd+ Library<span class="vh"> (opens in a new tab)</span></a> with a DOI, share datasets in <a href="https://works.hcommons.org/collections/stemedplus-data/" target="_blank" rel="noopener noreferrer">STEMEd+ Data<span class="vh"> (opens in a new tab)</span></a>, and connect with teachers and researchers across fields. You can sign in through your institution, ORCID, or another provider.</p><p><a href="https://stemedplus.org/" target="_blank" rel="noopener noreferrer">Visit STEMEd+ Commons<span class="vh"> (opens in a new tab)</span></a> · <a href="https://stemedplus.org/join-stemed/" target="_blank" rel="noopener noreferrer">Join STEMEd+<span class="vh"> (opens in a new tab)</span></a></p></div></div>
+<section class="soon" aria-labelledby="soon-h">
+  <div class="wrap">
+    <h2 id="soon-h">Nominations closing in the next 60 days</h2>
+    <div id="strip" class="strip"></div>
+  </div>
+</section>
+<main class="wrap">
+  <div class="controls" role="search">
+    <div class="search"><label for="q">Search</label><input id="q" type="search" placeholder="Award, sponsor, or topic" autocomplete="off"></div>
+    <div><label for="recognizes">Recognizes</label><select id="recognizes"><option value="">All</option></select></div>
+    <div><label for="discipline">Discipline</label><select id="discipline"><option value="">All</option></select></div>
+    <div><label for="level">Where the work happens</label><select id="level"><option value="">All</option></select></div>
+    <div><label for="stage">Career stage</label><select id="stage"><option value="">All</option></select></div>
+    <div><label for="nomination">Who nominates</label><select id="nomination"><option value="">Anyone</option>
+      <option value="self">Self-nominations welcome</option><option value="others">Someone else nominates</option></select></div>
+    <div><label for="where">Open to</label><select id="where"><option value="">Anywhere</option><option value="International">Nominees from any country</option></select></div>
+    <div><label for="status">Status</label><select id="status">
+      <option value="" selected>All, including between cycles</option>
+      <option value="active">Taking nominations or deadline announced</option>
+      <option value="dated">Has an upcoming deadline</option>
+    </select></div>
+    <div><label for="within">Deadline within</label><select id="within">
+      <option value="">Any time</option><option value="30">30 days</option><option value="60">60 days</option>
+      <option value="90">90 days</option><option value="180">6 months</option><option value="365">12 months</option>
+    </select></div>
+  </div>
+  <div class="bar">
+    <p id="count" aria-live="polite"></p>
+    <div class="r">
+      <label for="sort" style="margin:0">Sort</label>
+      <select id="sort"><option value="deadline">Deadline, soonest first</option><option value="name">Name</option><option value="new">Newly listed</option></select>
+      <button type="button" class="link" id="share">Copy link to this view</button>
+    </div>
+  </div>
+  <p class="disclaimer">Deadlines, eligibility, and rules change. Always confirm details on the sponsor's own page before you nominate.</p>
+  <ol id="list"></ol>
+  <div class="more"><button id="more" type="button" hidden>Show more</button></div>
+</main>
+<footer>
+  <div class="wrap">
+    <h2 id="calendar">Nomination calendar</h2>
+    <p>Subscribe to every dated nomination deadline in Google Calendar, Outlook, or Apple Calendar with this address (choose "add calendar from URL"):</p>
+    <p><code id="icsurl"></code> <button type="button" class="link" id="copyics">Copy</button></p>
+    <p>Each listing with a deadline also has an "Add to calendar" link for just that deadline. Most awards need letters of support, so plan a few weeks ahead.</p>
+    <h2>What is listed</h2>
+    <p><span id="curcount"></span> national and international awards for STEM+ teaching, STEM+ education research, and education-adjacent work such as science communication and public engagement, kept by hand and each checked against the sponsor's page on the date shown. Awards between cycles stay listed so you can plan a nomination. Campus and regional awards are not listed, except where they lead to a national one.</p>
+    <p>Disciplines use the same categories as every STEMEd+ board. Awards open to all STEM+ fields appear under every discipline.</p>
+    <h2 id="add">Add or correct a listing</h2>
+    <p>Know an award we are missing, or see something out of date? <a id="suggest2" href="#">Suggest an award</a> or <a id="update" href="#">report a correction</a> on GitHub, or use our <a href="https://stemedplus.org/contact-us/">contact form</a> and include the award's name, the sponsor's page, and the deadline. For a correction, name the award you are correcting.</p>
+    <h2>RSS</h2>
+    <p><a href="feeds/new.xml">Newly listed awards</a>, for feed readers.</p>
+    <div class="join join-bottom" role="note"><p><strong>STEMEd+ Awards is part of STEMEd+ Commons</strong>, which brings together teachers, researchers, and learning professionals from every field to share work, find each other, and build what comes next. Join to set up your profile, add papers, posters, slides, and other work to the <a href="https://works.hcommons.org/collections/stemedplus/" target="_blank" rel="noopener noreferrer">STEMEd+ Library<span class="vh"> (opens in a new tab)</span></a> with a DOI, share datasets in <a href="https://works.hcommons.org/collections/stemedplus-data/" target="_blank" rel="noopener noreferrer">STEMEd+ Data<span class="vh"> (opens in a new tab)</span></a>, and connect with teachers and researchers across fields. You can sign in through your institution, ORCID, or another provider.</p><p><a href="https://stemedplus.org/" target="_blank" rel="noopener noreferrer">Visit STEMEd+ Commons<span class="vh"> (opens in a new tab)</span></a> · <a href="https://stemedplus.org/join-stemed/" target="_blank" rel="noopener noreferrer">Join STEMEd+<span class="vh"> (opens in a new tab)</span></a></p></div>
+    <h2><a id="morehead" href="https://stemedplus.hcommons.org/">More from STEMEd+ Commons</a></h2>
+    <ul id="related"></ul>
+    <p>Share the work behind your award: add papers, curricula, and data to the <a id="commons" href="#">STEMEd+ Commons</a>.</p>
+    <details id="reviewbox" hidden><summary id="reviewsum">For maintainers</summary><ul id="reviewlist"></ul></details>
+    <p><a id="repo" href="#">About this site</a> · <span id="updated"></span></p>
+  </div>
+</footer>
+<script>
+(function () {
+  'use strict';
+  var PAGE = 50, state = { d: null, shown: PAGE };
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function el(id) { return document.getElementById(id); }
+  function node(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  function ext(a) { a.target = '_blank'; a.rel = 'noopener noreferrer'; a.appendChild(node('span', 'vh', ' (opens in a new tab)')); return a; }
+  function link(href, text, cls) { var a = node('a', cls, text); a.href = href; return ext(a); }
+  function fill(sel, values, labels) { values.forEach(function (v, i) { var o = node('option', '', labels ? labels[i] : v); o.value = v; sel.appendChild(o); }); }
+  function pretty(iso) { if (!iso) return ''; var p = iso.split('-'); return p.length < 3 ? iso : MONTHS[+p[1] - 1] + ' ' + (+p[2]) + ', ' + p[0]; }
+  function daysUntil(iso) { var t = new Date(state.d.today + 'T00:00:00Z'), d = new Date(iso + 'T00:00:00Z'); return Math.round((d - t) / 864e5); }
+
+  function deadlineBadge(i) {
+    if (!i.deadline) return null;   // the status tag below says it
+    var b = node('span', 'due'), n = daysUntil(i.deadline), when = n === 0 ? 'today' : n === 1 ? 'tomorrow' : 'in ' + n + ' days';
+    b.textContent = 'Nominations due ' + pretty(i.deadline) + ' · ' + when;
+    b.className += n <= 14 ? ' soon' : n <= 45 ? ' mid' : ' ok';
+    return b;
+  }
+
+  function icsFor(i) {
+    var d = i.deadline.replace(/-/g, ''), e = new Date(i.deadline + 'T00:00:00Z'); e.setUTCDate(e.getUTCDate() + 1);
+    var end = e.toISOString().slice(0, 10).replace(/-/g, '');
+    function esc(s) { return s.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,'); }
+    var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//STEMEd+//Awards//EN', 'BEGIN:VEVENT',
+      'UID:' + i.id.replace(':', '-') + '@stemed-awards', 'DTSTAMP:' + state.d.generated.replace(/[-:]/g, ''),
+      'DTSTART;VALUE=DATE:' + d, 'DTEND;VALUE=DATE:' + end, 'SUMMARY:' + esc('Nominations due: ' + i.title),
+      'DESCRIPTION:' + esc(i.sponsor + '. Confirm on the sponsor\'s page: ' + i.url), 'URL:' + i.url, 'END:VEVENT', 'END:VCALENDAR'];
+    return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(lines.join('\r\n'));
+  }
+
+  function matches(i) {
+    var q = el('q').value.trim().toLowerCase(), r = el('recognizes').value, dsc = el('discipline').value, lv = el('level').value,
+        sg = el('stage').value, nm = el('nomination').value, wh = el('where').value, st = el('status').value, w = el('within').value;
+    if (q && [i.title, i.sponsor, i.summary, i.eligibility, i.prize, i.country].join(' ').toLowerCase().indexOf(q) === -1) return false;
+    if (r && i.recognizes.indexOf(r) === -1) return false;
+    // Awards open to all STEM+ fields show under every discipline except named-only ones (STEAM: Arts+STEM).
+    var general = i.all_fields && (state.d.named_only || []).indexOf(dsc) === -1;
+    if (dsc && !general && i.disciplines.indexOf(dsc) === -1) return false;
+    if (lv && i.levels.length && i.levels.indexOf(lv) === -1) return false;     // no levels listed = any level
+    if (sg && i.stages.length && i.stages.indexOf(sg) === -1) return false;     // no stages listed = any stage
+    if (nm === 'self' && ['self', 'self-or-others'].indexOf(i.nomination) === -1) return false;
+    if (nm === 'others' && ['others', 'institution', 'self-or-others'].indexOf(i.nomination) === -1) return false;
+    if (wh === 'International' && i.open_to !== 'International') return false;
+    if (wh && wh !== 'International' && i.open_to !== 'International' && i.country !== wh) return false;
+    if (st === 'active' && ['open', 'upcoming'].indexOf(i.status) === -1) return false;
+    if (st === 'dated' && !i.deadline) return false;
+    if (w && !(i.deadline && daysUntil(i.deadline) <= +w)) return false;
+    return true;
+  }
+
+  function card(i) {
+    var li = document.createElement('li');
+    li.appendChild(link(i.url, i.title, 't'));
+    li.appendChild(node('div', 'meta', i.sponsor));
+    var badge = deadlineBadge(i); if (badge) li.appendChild(badge);
+    if (i.deadline_note) li.appendChild(node('div', 'note', i.deadline_note));
+    if (i.summary) li.appendChild(node('p', 'sum', i.summary));
+    var dl = node('dl', 'facts');
+    function fact(term, val) { if (!val) return; dl.appendChild(node('dt', '', term)); dl.appendChild(node('dd', '', val)); }
+    fact('Prize', i.prize);
+    fact('Who can be nominated', i.eligibility);
+    fact('Open to', i.open_to === 'International' ? 'Nominees from any country' : i.country);
+    fact('Last checked', pretty(i.checked));
+    if (dl.childNodes.length) li.appendChild(dl);
+    var tags = node('div', 'tags');
+    tags.appendChild(node('span', 'tag st', state.d.status_labels[i.status] || i.status));
+    tags.appendChild(node('span', 'tag st', state.d.nomination_labels[i.nomination]));
+    if (i.all_fields) tags.appendChild(node('span', 'tag', 'All STEM+ fields'));
+    else i.disciplines.forEach(function (x) { tags.appendChild(node('span', 'tag', x)); });
+    i.recognizes.concat(i.levels, i.stages).forEach(function (x) { tags.appendChild(node('span', 'tag k', x)); });
+    li.appendChild(tags);
+    var acts = node('div', 'acts');
+    acts.appendChild(link(i.url, "Sponsor's page"));
+    if (i.deadline) { var a = node('a', '', 'Add to calendar'); a.href = icsFor(i); a.download = i.id.replace(':', '-') + '.ics'; acts.appendChild(a); }
+    acts.appendChild(link(updateUrl(i), 'Report a correction'));
+    li.appendChild(acts);
+    return li;
+  }
+
+  function sorted(items) {
+    var s = el('sort').value;
+    if (s === 'new') return items.slice().sort(function (a, b) { return a.first_seen < b.first_seen ? 1 : a.first_seen > b.first_seen ? -1 : 0; });
+    if (s === 'name') return items.slice().sort(function (a, b) { return a.title.localeCompare(b.title); });
+    return items;   // already in deadline order
+  }
+
+  function render() {
+    var items = sorted(state.d.items.filter(matches)), list = el('list');
+    list.innerHTML = '';
+    el('count').textContent = items.length + (items.length === 1 ? ' award' : ' awards');
+    if (!items.length) { list.appendChild(node('li', 'empty', 'Nothing matches. Try clearing a filter.')); el('more').hidden = true; return; }
+    items.slice(0, state.shown).forEach(function (i) { list.appendChild(card(i)); });
+    el('more').hidden = items.length <= state.shown;
+  }
+
+  var IDS = ['q', 'recognizes', 'discipline', 'level', 'stage', 'nomination', 'where', 'status', 'within', 'sort'];
+  function defaultValue(e) {
+    if (e.tagName !== 'SELECT') return '';
+    for (var k = 0; k < e.options.length; k++) if (e.options[k].defaultSelected) return e.options[k].value;
+    return e.options[0].value;
+  }
+  function viewHash() {
+    return IDS.map(function (id) {
+      var e = el(id);
+      return e.value !== defaultValue(e) ? id + '=' + encodeURIComponent(e.value) : null;
+    }).filter(Boolean).join('&');
+  }
+  function readHash() {
+    location.hash.replace(/^#/, '').split('&').forEach(function (p) {
+      var kv = p.split('='); if (IDS.indexOf(kv[0]) !== -1 && kv.length === 2) el(kv[0]).value = decodeURIComponent(kv[1]);
+    });
+  }
+  function changed() { state.shown = PAGE; var h = viewHash(); history.replaceState(null, '', h ? '#' + h : location.pathname + location.search); render(); }
+
+  function strip() {
+    var box = el('strip'), soon = state.d.items.filter(function (i) { return i.deadline && daysUntil(i.deadline) <= 60; }).slice(0, 8);
+    if (!soon.length) { box.appendChild(node('p', '', 'No dated nomination deadlines in the next 60 days.')); return; }
+    soon.forEach(function (i) {
+      var c = node('div', 'c'); c.appendChild(link(i.url, i.title));
+      c.appendChild(node('div', 'm', i.sponsor + ' · due ' + pretty(i.deadline)));
+      box.appendChild(c);
+    });
+  }
+
+  function issueUrl(template, title) { return state.d.site.repo_url + '/issues/new?template=' + template + (title ? '&title=' + encodeURIComponent(title) : ''); }
+  function updateUrl(i) { return issueUrl('update_award.yml', 'Update: ' + i.title) + '&listing=' + encodeURIComponent(i.title + ' (' + i.file + ')'); }
+
+  function init(d) {
+    state.d = d;
+    var site = d.site;
+    document.title = site.title; el('title').textContent = site.title; el('tagline').textContent = site.tagline;
+    fill(el('recognizes'), d.recognizes);
+    fill(el('discipline'), d.disciplines);
+    fill(el('level'), d.levels);
+    fill(el('stage'), d.stages);
+    var countries = []; d.items.forEach(function (i) { if (i.country && countries.indexOf(i.country) === -1) countries.push(i.country); });
+    fill(el('where'), countries.sort(), countries.map(function (c) { return c + ' (and international awards)'; }));
+    readHash();
+    el('selfbtn').addEventListener('click', function (e) { e.preventDefault(); el('nomination').value = 'self'; changed(); el('list').scrollIntoView(); });
+    el('suggest2').href = issueUrl('suggest_award.yml'); ext(el('suggest2'));
+    el('update').href = issueUrl('update_award.yml'); ext(el('update'));
+    el('repo').href = site.repo_url; ext(el('repo'));
+    el('commons').href = site.commons_home; ext(el('commons'));
+    el('morehead').href = site.commons_home; ext(el('morehead'));
+    var ics = new URL('feeds/deadlines.ics', location.href).href;
+    el('icsurl').textContent = ics;
+    el('copyics').addEventListener('click', function () { navigator.clipboard && navigator.clipboard.writeText(ics); el('copyics').textContent = 'Copied'; });
+    site.related.forEach(function (r) { var li = document.createElement('li'); li.appendChild(link(r.url, r.name)); li.appendChild(document.createTextNode(': ' + r.about)); el('related').appendChild(li); });
+    el('curcount').textContent = d.items.length;
+    if (d.review.length) {
+      el('reviewbox').hidden = false; el('reviewsum').textContent = 'For maintainers: ' + d.review.length + ' listing(s) to re-check';
+      d.review.forEach(function (r) { el('reviewlist').appendChild(node('li', '', r.title + ' (' + r.file + '): ' + r.why.join('; '))); });
+    }
+    el('updated').textContent = 'Updated ' + pretty(d.generated.slice(0, 10)) + '.';
+    strip();
+    IDS.forEach(function (id) { el(id).addEventListener('input', changed); });
+    el('more').addEventListener('click', function () { state.shown += PAGE; render(); });
+    el('share').addEventListener('click', function () { navigator.clipboard && navigator.clipboard.writeText(location.href); el('share').textContent = 'Link copied'; });
+    render();
+    if (location.hash === '#add') el('add').scrollIntoView();
+  }
+
+  fetch('awards.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(init).catch(function () {
+    el('list').appendChild(node('li', 'empty', 'The listings could not be loaded. Please try again later.'));
+  });
+})();
+</script>
+<footer class="sp-footer"><div class="sp-fin"><p><strong>This site is part of <a href="https://stemedplus.org/">STEMEd+ Commons</a>, a Commons within <a href="https://hcommons.org/">Knowledge Commons</a>. STEMEd+ Commons brings together teachers, researchers, and learning professionals from every field to share work, find each other, and build what comes next. As an open access platform, STEMEd+ Commons helps ensure STEM+ teaching and STEM+ education research are accessible for all people, in all communities. This material is based upon work supported by the National Science Foundation under grants </strong><a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2226271">OAC-2226271</a><strong>, </strong><a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2321946">DRL-2321946</a><strong>, </strong><a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2531819">OAC-2531819</a> and by Michigan State University through the <a href="https://research.msu.edu/find-funding/msu-funding-opportunities/jenison-support">Jenison Fund</a>.</p></div></footer>
+</body>
+</html>

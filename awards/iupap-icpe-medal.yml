@@ -1,0 +1,13 @@
+name: "ICPE Medal"
+sponsor: "IUPAP International Commission on Physics Education (C14)"
+sponsor_type: "International organization"
+url: "https://iupap.org/who-we-are/internal-organization/commissions/c14-physics-education/c14-awards/"
+status: "between-cycles"
+deadline_note: "The most recent call closed June 30, 2026; submissions with two peer references go to the C14 chair and secretary. Given only when a worthy candidate is found."
+eligibility: "Physicists at any level of education whose contributions to physics education span many years and are international in scope."
+open_to: "International"
+nomination: "self-or-others"
+recognizes: ["Teaching", "Education research"]
+summary: "Recognizes outstanding contributions to physics teaching that transcend national boundaries. The awardee presents at a physics education conference."
+disciplines: ["Physics"]
+checked: 2026-11-23

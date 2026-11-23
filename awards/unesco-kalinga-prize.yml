@@ -1,0 +1,13 @@
+name: "UNESCO Kalinga Prize for the Popularization of Science"
+sponsor: "UNESCO"
+sponsor_type: "International organization"
+url: "https://www.unesco.org/en/prizes/popularization-science"
+status: "periodic"
+deadline_note: "Awarded every two years. Candidates are nominated by UNESCO Member State governments or NGOs in official partnership with UNESCO; self-nominations without that endorsement are not considered."
+open_to: "International"
+nomination: "institution"
+recognizes: ["Communication and public engagement"]
+levels: ["Informal and public"]
+summary: "UNESCO's oldest prize, for a distinguished career communicating science, research, and technology to the public."
+disciplines: ["Science & Health Communication"]
+checked: 2026-11-23

@@ -1,0 +1,45 @@
+{
+  "title": "STEMEd+ Awards",
+  "tagline": "National and international awards for STEM+ teaching, STEM+ education research, and science communication and public engagement, with who can be nominated and when nominations are due.",
+  "repo_url": "https://github.com/stemedplus/stemed-awards",
+  "site_url": "https://stemedplus.github.io/stemed-awards/",
+  "commons_home": "https://stemedplus.hcommons.org/",
+  "related": [
+    {
+      "name": "STEMEd+ Funding",
+      "url": "https://stemedplus.github.io/stemed-funding/",
+      "about": "open calls for STEM+ teaching and STEM+ education research"
+    },
+    {
+      "name": "STEMEd+ Deadlines",
+      "url": "https://stemedplus.github.io/stemed-deadlines/",
+      "about": "every STEMEd+ deadline in one page and one calendar"
+    },
+    {
+      "name": "STEMEd+ Conferences",
+      "url": "https://stemedplus.github.io/stemed-conferences/",
+      "about": "meetings, proposal deadlines, and travel support for STEM+ education"
+    },
+    {
+      "name": "STEMEd+ Digest",
+      "url": "https://stemedplus.github.io/STEMEd-Digest/",
+      "about": "new journal articles, preprints, and dissertations"
+    },
+    {
+      "name": "STEM+ Education Research Graduate Programs",
+      "url": "https://stemedplus.github.io/stem-ed-research-programs/",
+      "about": "where to study STEM+ education research"
+    },
+    {
+      "name": "STEMEd+ Professional Development",
+      "url": "https://stemedplus.github.io/stemed-professional-development/",
+      "about": "national programs for K-12 teachers, informal educators, college faculty and instructors, and graduate students and postdocs"
+    },
+    {
+      "name": "STEMEd+ Jobs",
+      "url": "https://stemedplus.github.io/stemed-jobs/",
+      "about": "positions in STEM+ education"
+    }
+  ],
+  "feed_size": 100
+}

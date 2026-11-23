@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "STEMEd+ Awards listing",
+  "description": "One national or international award for STEM+ teaching, STEM+ education research, or education-adjacent work such as science communication. One file per award (or per closely related set of awards from one sponsor) in awards/.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "sponsor",
+    "sponsor_type",
+    "url",
+    "status",
+    "recognizes",
+    "nomination",
+    "summary",
+    "checked"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Award name as the sponsor gives it."
+    },
+    "sponsor": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Organization that gives the award."
+    },
+    "sponsor_type": {
+      "enum": [
+        "Society or association",
+        "Academy",
+        "Foundation",
+        "Government",
+        "International organization"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "description": "The sponsor's own page for the award."
+    },
+    "status": {
+      "enum": [
+        "open",
+        "upcoming",
+        "between-cycles",
+        "periodic",
+        "paused"
+      ],
+      "description": "open: taking nominations now. upcoming: next deadline announced. between-cycles: annual, next dates not yet posted. periodic: given every two or more years. paused: sponsor has paused it."
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Next nomination deadline, if announced (YYYY-MM-DD)."
+    },
+    "opens": {
+      "type": "string",
+      "format": "date",
+      "description": "When nominations open, if announced."
+    },
+    "deadline_note": {
+      "type": "string",
+      "description": "How the cycle usually runs, in a sentence."
+    },
+    "prize": {
+      "type": "string",
+      "description": "Cash prize, medal, lecture, travel, and so on."
+    },
+    "eligibility": {
+      "type": "string",
+      "description": "Who can be nominated, and who can nominate, in a sentence or two."
+    },
+    "open_to": {
+      "enum": [
+        "International",
+        "National"
+      ],
+      "description": "International: nominees from any country. National: nominees from the country or countries in `country`. Leave out if the sponsor does not say."
+    },
+    "country": {
+      "type": "string",
+      "description": "For national awards, e.g. 'United States' or 'United Kingdom and Ireland'."
+    },
+    "nomination": {
+      "enum": [
+        "self",
+        "self-or-others",
+        "others",
+        "institution",
+        "see-sponsor"
+      ],
+      "description": "self: you apply yourself. self-or-others: self-nominations welcome. others: someone else must nominate you. institution: your school, university, or another organization nominates. see-sponsor: the sponsor's page does not say; check before nominating."
+    },
+    "recognizes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "Teaching",
+          "Education research",
+          "Communication and public engagement",
+          "Mentoring",
+          "Curriculum and innovation",
+          "Broadening participation",
+          "Service and leadership"
+        ]
+      }
+    },
+    "stages": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Career stages the award is limited to; leave out if any stage can be nominated.",
+      "items": {
+        "enum": [
+          "Students",
+          "Early career",
+          "Mid career",
+          "Senior and lifetime"
+        ]
+      }
+    },
+    "levels": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Where the nominee's teaching or work takes place; leave out if any level.",
+      "items": {
+        "enum": [
+          "K-12",
+          "Undergraduate",
+          "Graduate and professional",
+          "Informal and public"
+        ]
+      }
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 400,
+      "description": "What it recognizes, in your own words."
+    },
+    "disciplines": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Leave empty for awards open to all STEM+ fields. Labels from the STEMEd+ discipline list (stemed_awards/stemedplus_disciplines.json, kept in stemedplus-theme); the build checks them against that list.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "checked": {
+      "type": "string",
+      "format": "date",
+      "description": "When someone last checked this against the sponsor's page."
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "open_to": {
+            "const": "National"
+          }
+        },
+        "required": [
+          "open_to"
+        ]
+      },
+      "then": {
+        "required": [
+          "country"
+        ]
+      }
+    }
+  ]
+}

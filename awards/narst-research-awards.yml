@@ -1,0 +1,14 @@
+name: "NARST Research Awards"
+sponsor: "NARST (National Association for Research in Science Teaching)"
+sponsor_type: "Society or association"
+url: "https://narst.org/awards"
+status: "between-cycles"
+deadline_note: "Annual; nominations for the 2027 awards closed August 14, 2026."
+eligibility: "Distinguished Contributions: at least 20 years after the doctorate. Early Career: within 7 years of the doctorate. Outstanding Doctoral Research: a recent dissertation."
+open_to: "International"
+nomination: "others"
+recognizes: ["Education research"]
+stages: ["Students", "Early career", "Senior and lifetime"]
+summary: "NARST's research awards: Distinguished Contributions to Science Education through Research, the Early Career Research Award, the Outstanding Doctoral Research Award, and the NARST Fellows program."
+disciplines: ["Science Education"]
+checked: 2026-11-23

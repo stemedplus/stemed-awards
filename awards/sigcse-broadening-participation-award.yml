@@ -1,0 +1,13 @@
+name: "ACM SIGCSE Award for Broadening Participation in Computing Education"
+sponsor: "ACM Special Interest Group on Computer Science Education"
+sponsor_type: "Society or association"
+url: "https://sigcse.org/programs/awards/"
+status: "between-cycles"
+deadline_note: "Annual; nominations are due September 1 and must come from a SIGCSE member."
+eligibility: "Early-career SIGCSE members, in education or industry."
+nomination: "others"
+recognizes: ["Broadening participation"]
+stages: ["Early career"]
+summary: "Recognizes a fundamental and innovative contribution to broadening participation in computing education."
+disciplines: ["Computing"]
+checked: 2026-11-23

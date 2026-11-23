@@ -1,0 +1,11 @@
+name: "AMTE Awards"
+sponsor: "Association of Mathematics Teacher Educators"
+sponsor_type: "Society or association"
+url: "https://amte.net/about/awards"
+status: "between-cycles"
+deadline_note: "Each award runs on its own cycle, with nominations usually due in May or June; Excellence in Teaching is next given in 2028. AMTE members nominate; self-nominations are not accepted."
+nomination: "others"
+recognizes: ["Teaching", "Education research", "Service and leadership"]
+summary: "Awards for mathematics teacher educators, including Excellence in Teaching, Excellence in Scholarship, leadership and advocacy awards, an Early Career Award, and a dissertation award."
+disciplines: ["Mathematics"]
+checked: 2026-11-23

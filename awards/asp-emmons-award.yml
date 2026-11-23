@@ -1,0 +1,13 @@
+name: "Richard H. Emmons Award"
+sponsor: "Astronomical Society of the Pacific"
+sponsor_type: "Society or association"
+url: "https://astrosociety.org/who-we-are/awards.html"
+status: "between-cycles"
+deadline_note: "Annual; ASP award nominations are usually due March 15."
+eligibility: "College and university instructors of introductory astronomy for students who are not science majors."
+nomination: "see-sponsor"
+recognizes: ["Teaching"]
+levels: ["Undergraduate"]
+summary: "Recognizes excellence in teaching college-level introductory astronomy to non-science majors."
+disciplines: ["Astronomy & Space Science"]
+checked: 2026-11-23

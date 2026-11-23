@@ -1,0 +1,73 @@
+name: Suggest an award
+description: A national or international award for STEM+ teaching, STEM+ education research, or science communication.
+title: "Add: "
+labels: ["add award"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! This list covers national and international awards. Campus and regional awards are not
+        listed unless they lead to a national one. A maintainer checks the sponsor's page before listing it.
+  - type: input
+    id: name
+    attributes: {label: "Award name", placeholder: "e.g. Excellence in Physics Education Award"}
+    validations: {required: true}
+  - type: input
+    id: sponsor
+    attributes: {label: "Sponsor", placeholder: "e.g. American Physical Society"}
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes: {label: "Link to the sponsor's page for this award"}
+    validations: {required: true}
+  - type: input
+    id: deadline
+    attributes: {label: "Next nomination deadline, if known", placeholder: "YYYY-MM-DD, or 'every June 30'"}
+  - type: dropdown
+    id: nomination
+    attributes:
+      label: Who nominates?
+      options: ["Self-nominations welcome", "Someone else must nominate", "An institution nominates", "Not sure"]
+  - type: checkboxes
+    id: recognizes
+    attributes:
+      label: What it recognizes
+      options:
+        - label: Teaching
+        - label: Education research
+        - label: Communication and public engagement
+        - label: Mentoring
+        - label: Curriculum and innovation
+        - label: Broadening participation
+        - label: Service and leadership
+  - type: input
+    id: eligibility
+    attributes: {label: "Who can be nominated", placeholder: "e.g. K-12 teachers in the US; early-career researchers within 7 years of the PhD"}
+  - type: input
+    id: prize
+    attributes: {label: "Prize", placeholder: "e.g. $5,000 and a lecture at the annual meeting"}
+  - type: textarea
+    id: summary
+    attributes: {label: "What it recognizes", description: "A sentence or two in your own words."}
+  - type: checkboxes
+    id: disciplines
+    attributes:
+      label: Disciplines (leave blank if open to all STEM+ fields)
+      options:
+        - label: Agriculture
+        - label: Astronomy & Space Science
+        - label: Bioscience
+        - label: Chemistry
+        - label: Computing
+        - label: Earth Science
+        - label: Engineering
+        - label: Environmental Science
+        - label: Health Education
+        - label: History & Philosophy of Science (including history of medicine and science and technology studies)
+        - label: Human Dimensions (including human dimensions of natural resources, forestry, wildlife, and climate change)
+        - label: Learning Science
+        - label: Mathematics
+        - label: Physics
+        - label: Science & Health Communication (including risk and climate communication, public engagement, and science journalism)
+        - label: Science Education
+        - label: "STEAM: Arts+STEM"

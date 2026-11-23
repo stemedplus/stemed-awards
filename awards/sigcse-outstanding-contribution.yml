@@ -1,0 +1,11 @@
+name: "ACM SIGCSE Award for Outstanding Contribution to Computer Science Education"
+sponsor: "ACM Special Interest Group on Computer Science Education"
+sponsor_type: "Society or association"
+url: "https://sigcse.org/programs/awards/outstanding.html"
+status: "between-cycles"
+deadline_note: "Annual; nominations are due September 1. Nominators must be SIGCSE members; self-nominations are not allowed. The Distinguished Service Award shares the same deadline."
+nomination: "others"
+recognizes: ["Teaching", "Education research", "Curriculum and innovation"]
+summary: "Honors an individual or group for a contribution with long-lasting impact on computing education."
+disciplines: ["Computing"]
+checked: 2026-11-23

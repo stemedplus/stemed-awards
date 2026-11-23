@@ -1,0 +1,13 @@
+name: "Patrick Moore Medal"
+sponsor: "Royal Astronomical Society"
+sponsor_type: "Society or association"
+url: "https://ras.ac.uk/awards-and-grants/awards"
+status: "between-cycles"
+deadline_note: "Annual; Education and Outreach Award nominations are due the last Friday in September for the following year (the 2027 round closed September 25, 2026). Anyone can nominate."
+eligibility: "School teachers of astronomy or geophysics."
+nomination: "others"
+recognizes: ["Teaching"]
+levels: ["K-12"]
+summary: "The RAS medal for an outstanding contribution to teaching astronomy or geophysics in schools."
+disciplines: ["Astronomy & Space Science", "Earth Science"]
+checked: 2026-11-23
